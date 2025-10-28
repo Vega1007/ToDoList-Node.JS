@@ -1,0 +1,33 @@
+<h1>Minhas Tarefas</h1>
+
+{{#if success_msg}}
+<div class="flash-success">{{success_msg}}</div>
+{{/if}}
+{{#if error_msg}}
+<div class="flash-error">{{error_msg}}</div>
+{{/if}}
+
+<!-- Formulário para adicionar nova tarefa -->
+<form action="/tasks/add" method="POST" class="add-task-form">
+  <input type="text" name="title" placeholder="Nova tarefa..." required>
+  <button type="submit">Adicionar</button>
+</form>
+
+<!-- Lista de tarefas -->
+<ul class="task-list">
+  {{#each tasks}}
+  <li class="task-item {{#if done}}done{{/if}}">
+    <span>{{title}}</span>
+    <div class="task-buttons">
+      <form action="/tasks/{{id}}/done" method="POST">
+        <input type="hidden" name="done" value="{{done}}">
+        <button type="submit">{{#if done}}Desmarcar{{else}}Concluir{{/if}}</button>
+      </form>
+      <form action="/tasks/{{id}}/delete" method="POST">
+        <button class="delete-btn" type="submit">Deletar</button>
+      </form>
+    </div>
+  </li>
+  {{/each}}
+  <a href="/auth/logout" class="btn btn-danger">Sair</a>
+</ul>

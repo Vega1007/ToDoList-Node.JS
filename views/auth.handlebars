@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDoList </title>
+</head>
+
+<body>
+  <div>
+    <h1>ToDoList</h1>
+
+    {{#if success_msg}}
+      <div class="flash-success">{{success_msg}}</div>
+    {{/if}}
+
+    {{#if error_msg}}
+      <div class="flash-error">{{error_msg}}</div>
+    {{/if}}
+
+    <div class="auth-wrapper">
+
+      <!-- Seção de Login -->
+      <div class="auth-section">
+        <h2>Login</h2>
+        <form action="/auth/login" method="POST">
+          <label>Usuário:</label>
+          <input type="text" name="username" placeholder="Digite seu nome" required>
+
+          <label>Senha:</label>
+          <input type="password" name="password" placeholder="Digite sua senha" required>
+
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <!-- Seção de Cadastro -->
+      <div class="auth-section">
+        <h2>Cadastrar novo usuário</h2>
+        <form action="/auth/register" method="POST">
+          <label>Novo Usuário:</label>
+          <input type="text" name="username" placeholder="Crie um nome de usuário" required>
+
+          <label>Senha:</label>
+          <input type="password" name="password" placeholder="Crie uma senha" required>
+
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
