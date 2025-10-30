@@ -24,7 +24,7 @@ async function findByUsername(username) {
       [username]
     );
 
-    // Se não encontrar, retorna null
+  
     return rows[0] || null;
   } catch (error) {
     console.error('Erro ao buscar usuário por username:', error);
@@ -53,3 +53,4 @@ module.exports = {
   findByUsername,
   findById
 };
+
