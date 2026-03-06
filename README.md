@@ -1,32 +1,65 @@
-# 📝 ToDoList - Node.JS + MySQL
+Todo List Application (Node.js + MySQL)
 
-Este é um projeto de **lista de tarefas (ToDo List)** desenvolvido com **Node.js** e **MySQL**.  
-Foi o meu **primeiro projeto utilizando o MySQL** como banco de dados, integrando com o backend em Node.js.
+This is a task management (Todo List) web application built with Node.js and MySQL.
 
-O sistema permite que o usuário **cadastre, visualize e gerencie suas tarefas**, com autenticação e sessões para controle de login.
+The project allows users to create accounts, log in securely, and manage their personal tasks. It was my first project using MySQL, created to practice database integration with a Node.js backend.
 
- Funcionalidades
+Features
 
-- Cadastro e login de usuários  
-- Criação, listagem e exclusão de tarefas  
-- Sessão de usuário com autenticação  
-- Mensagens de feedback (sucesso e erro)  
-- Criptografia de senhas com bcrypt  
+User registration and login
 
----
+Secure password encryption using bcrypt
 
-bibliotecas Utilizadas
- 
-- Node.js
-- Express
-- Express-Handlebars  
-- Body-Parser 
-- MySQL2
-- Connect-Flash  
-- Express-Session 
-- Bcrypt
-- nodemon
+User authentication with sessions
 
-Como os outros para a incialização basta instalar as bibliotecas ajustar o package.json ("script": { "dev": nodemon server.js"}) dar um **npm run dev** e no navegador: localhost:3000
+Create tasks
 
-Peço perdão pelo CSS é o que eu menos domino.
+View task list
+
+Delete tasks
+
+Feedback messages for success and errors
+
+Technologies Used
+
+Node.js
+
+Express
+
+Express-Handlebars
+
+Body-Parser
+
+MySQL2
+
+Express-Session
+
+Connect-Flash
+
+Bcrypt
+
+Nodemon
+
+Running the Project
+
+Install the dependencies:
+
+npm install
+
+Configure the development script in package.json:
+
+"scripts": {
+"dev": "nodemon server.js"
+}
+
+Start the server:
+
+npm run dev
+
+Open your browser and access:
+
+http://localhost:3000
+
+Purpose of the Project
+
+This project was created to practice backend development with Node.js, user authentication, session management, and integration with a MySQL relational database.
